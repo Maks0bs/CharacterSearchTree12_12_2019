@@ -46,6 +46,17 @@ public class CharacterSearchTree {
         }
     }
 
+    public void showPreOrder(){// AUFGABE 3
+        if (isEmpty()){
+            System.out.println("*");
+        }
+        else{
+            System.out.println(content.toString());
+            leftChild.showPreOrder();
+            rightChild.showPreOrder();
+        }
+    }
+
     public boolean isEmpty() {
         return content == null;
     }
